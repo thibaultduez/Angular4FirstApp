@@ -2,7 +2,7 @@
         (click)="onDisplayDetails()">Display Details</button>
 
 <p *ngIf="displayDetails === true">Secret Password = tuna</p>
-<br>
-<span *ngFor="let counter of displayDetailsClicks"
-      [ngStyle]="{backgroundColor: counter >= 5 ? 'blue' : ''}"
-      [ngClass]="{whiteColor: counter >= 5}">{{ counter }} </span>
+
+<div *ngFor="let log of logs; let i = index"
+      [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : ''}"
+      [ngClass]="{whiteColor: i >= 4}">{{ log }}</div>

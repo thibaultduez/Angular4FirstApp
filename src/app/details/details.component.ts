@@ -7,8 +7,8 @@ import {Component, OnInit} from '@angular/core';
 })
 export class DetailsComponent implements OnInit {
   displayDetails = false;
-  displayDetailsClicks = [];
-  displayDetailsClicksCounter = 0;
+  logs = [];
+  // displayDetailsClicksCounter = 0;
 
   constructor() {
   }
@@ -18,7 +18,8 @@ export class DetailsComponent implements OnInit {
 
   onDisplayDetails() {
     this.displayDetails = !this.displayDetails;
-    this.displayDetailsClicksCounter++;
-    this.displayDetailsClicks.push(this.displayDetailsClicksCounter);
+    // this.displayDetailsClicksCounter++;
+    // this.displayDetailsClicks.push(this.displayDetailsClicksCounter);
+    this.logs.push(new Date());
   }
 }
