@@ -1,0 +1,8 @@
+<button class="btn btn-primary"
+        (click)="onDisplayDetails()">Display Details</button>
+
+<p *ngIf="displayDetails === true">Secret Password = tuna</p>
+<br>
+<span *ngFor="let counter of displayDetailsClicks"
+      [ngStyle]="{backgroundColor: counter >= 5 ? 'blue' : ''}"
+      [ngClass]="{whiteColor: counter >= 5}">{{ counter }} </span>
